@@ -12,7 +12,7 @@ def calcular():
         potencia_panel = float(entry_potencia_panel.get())
         costo_sistema = float(entry_costo_sistema.get())
         costo_unitarioCuv = float(entry_costo_unitario.get())
-        ahorro_anual = float(entry_ahorro_anual.get())
+        
         
         consumo_diario = consumo_mensual / 30
         potencia_requerida = consumo_diario / irradiacion
@@ -51,7 +51,7 @@ frame = tk.Frame(root)
 frame.pack(pady=20)
 
 
-labels = ["Consumo mensual (KWH)", "Irradiación solar (HSP)", "Potencia panel (W)", "Costo del sistema ($)", "Ahorro anual ($)"]
+labels = ["Consumo mensual (KWH)", "Irradiación solar (HSP)", "Potencia panel (W)", "Costo del sistema ($)" ]
 entries = []
 
 for lbl in labels:
@@ -60,7 +60,7 @@ for lbl in labels:
     entry.pack()
     entries.append(entry)
 
-entry_consumo, entry_irradiacion, entry_potencia_panel, entry_costo_sistema,entry_costo_unitario, entry_ahorro_anual = entries
+entry_consumo, entry_irradiacion, entry_potencia_panel, entry_costo_sistema,entry_costo_unitario = entries
 
 resultado = tk.StringVar() 
 tk.Label(frame, textvariable=resultado, fg='green').pack()
