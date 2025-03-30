@@ -21,13 +21,13 @@ def calcular():
         ahorro_anual = consumo_mensual * costo_unitarioCuv * 12
         retorno_inversion = costo_sistema / ahorro_anual
 
-        resultado.set(f"Consumo diario: {consumo_diario:.2f} KWH\n"
-                      f"Potencia requerida: {potencia_requerida:.2f} KW\n"
-                      f"Número de paneles: {int(np.ceil(num_paneles))}\n"
-                      f"Ahorro anual: ${ahorro_anual:.2f}\n"
-                      f"Retorno de inversión: {retorno_inversion:.2f} años")
+        resultado.set(f"⚡ Consumo diario: {consumo_diario:.2f} KWH\n"
+                      f"🔋 Potencia requerida: {potencia_requerida:.2f} KW\n"
+                      f"☀️ Número de paneles: {int(np.ceil(num_paneles))}\n"
+                      f"💰 Ahorro anual: ${ahorro_anual:,.2f} COP\n"
+                      f"💰 Retorno de inversión: {retorno_inversion:.2f} años")
     except ValueError:
-        messagebox.showerror("Error", "Ingrese valores numéricos válidos")
+        messagebox.showerror(" Error", "Ingrese valores numéricos válidos")
 
 def graficar():
     """gráfico con los consumos ingresados y muestra el promedio"""
@@ -52,7 +52,7 @@ def graficar():
 
 # Interfaz gráfica
 root = tk.Tk()
-root.title("Calculadora de Energia solar Fotovoltaica y paneles solares  ") 
+root.title(" 💡Calculadora de Energia solar Fotovoltaica y paneles solares  ") 
 root.geometry("450x600")
 
 frame = tk.Frame(root)
@@ -75,7 +75,7 @@ resultado = tk.StringVar()
 tk.Label(frame, textvariable=resultado, fg='green').pack()
 
 
-ttk.Button(frame, text="Calcular", command=calcular).pack(pady=5)
+ttk.Button(frame, text="⚙️ Calcular", command=calcular).pack(pady=5)
 
 # Sección para graficar consumos mensuales
 tk.Label(frame, text="Ingrese consumos mensuales (KWH)").pack()
@@ -87,6 +87,6 @@ for mes in ["Dic", "Nov", "Oct", "Sep", "Ago", "Jul"]:
     entries_consumo.append(entry)
 
 
-ttk.Button(frame, text="Graficar Consumo", command=graficar).pack(pady=5)
+ttk.Button(frame, text=" 📊 Graficar Consumo", command=graficar).pack(pady=5)
 
 root.mainloop()
