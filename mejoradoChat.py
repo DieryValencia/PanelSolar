@@ -56,7 +56,7 @@ frame = ttk.Frame(root, padding=15)
 frame.pack(pady=10)
 
 # Etiqueta de título
-titulo = ttk.Label(frame, text="💡 Calculadora Fotovoltaica", font=("Arial", 14, "bold"))
+titulo = ttk.Label(frame, text="💡 Energia solar Fotovoltaica y paneles solares Calculadora y ", font=("Arial", 14, "bold"))
 titulo.grid(row=0, column=0, columnspan=2, pady=10)
 
 # Campos de entrada
@@ -64,7 +64,7 @@ labels = ["Consumo mensual (KWH):", "Irradiación solar (HSP):", "Potencia del p
 entries = []
 
 for i, lbl in enumerate(labels):
-    ttk.Label(frame, text=lbl, font=("Arial", 10)).grid(row=i+1, column=0, sticky="w", padx=5, pady=3)
+    ttk.Label(frame, text=lbl, font=("Arial", 10)).grid(row=i+1, column=0, sticky="w", padx=2, pady=1)
     entry = ttk.Entry(frame, width=20)
     entry.grid(row=i+1, column=1, padx=5, pady=3)
     entries.append(entry)
